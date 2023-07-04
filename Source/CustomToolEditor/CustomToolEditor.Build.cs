@@ -22,6 +22,9 @@ public class CustomToolEditor : ModuleRules
                 "BlueprintGraph",
                 "AnimGraph",
                 "ComponentVisualizers",
+                "EditorScriptingUtilities",
+                "Blutility",
+                "UMGEditor"
             }
         );
 

@@ -1,7 +1,10 @@
 #include "MenuTool/MenuTool.h"
 
 #include "CustomToolEditor.h"
+#include "EditorAssetLibrary.h"
 #include "EditorStyleSet.h"
+#include "EditorUtilitySubsystem.h"
+#include "EditorUtilityWidgetBlueprint.h"
 
 #define LOCTEXT_NAMESPACE "MenuTool"
 
@@ -19,7 +22,7 @@ public:
 
 	virtual void RegisterCommands() override
 	{
-		UI_COMMAND(MenuCommand1, "Menu Command 1", "Test Menu Command 1.", EUserInterfaceActionType::Button, FInputGesture());
+		UI_COMMAND(MenuCommand1, "Update Datatable", "Click to open datatable updater", EUserInterfaceActionType::Button, FInputGesture());
 	}
 
 public:
@@ -61,7 +64,23 @@ void MenuTool::MapCommands()
 
 void MenuTool::MenuCommand1()
 {
-	UE_LOG(LogClass, Log, TEXT("Clicked MenuCommand1"));
+	const FString PathToDatabaseSelector = "/Game/EditorUtility/DatabaseSelector";
+
+	UE_LOG(LogTemp, Warning, TEXT("Database Selector Path: %s"), *PathToDatabaseSelector);
+
+	UObject* WidgetObject = UEditorAssetLibrary::LoadAsset(PathToDatabaseSelector);
+
+	if (UEditorUtilityWidgetBlueprint* DatabaseSelector = Cast<UEditorUtilityWidgetBlueprint>(WidgetObject))
+	{
+		if (UEditorUtilitySubsystem* EditorUtilitySubsystem = GEditor->GetEditorSubsystem<UEditorUtilitySubsystem>())
+		{
+			EditorUtilitySubsystem->SpawnAndRegisterTab(DatabaseSelector);
+		}
+		else
+		{
+			UE_LOG(LogTemp, Warning, TEXT("Unable to open database selector"));
+		}
+	}
 }
 
 #undef LOCTEXT_NAMESPACE

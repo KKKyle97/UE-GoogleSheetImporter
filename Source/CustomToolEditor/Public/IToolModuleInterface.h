@@ -25,12 +25,9 @@ public:
 
 	void ShutdownModule() override
 	{
-		for (int32 i = 0; ModuleListeners.Num(); i++)
+		for (int32 i = 0; i < ModuleListeners.Num(); i++)
 		{
-			if (ModuleListeners[i].ToSharedPtr().IsValid())
-			{
-				ModuleListeners[i]->OnShutdownModule();
-			}
+			ModuleListeners[i]->OnShutdownModule();
 		}
 	}
 

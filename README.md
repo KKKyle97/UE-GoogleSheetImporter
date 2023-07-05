@@ -30,7 +30,7 @@
 | Python        | 3.9.7   |
 > Python default version is based on Unreal Engine Python Plugin. If you were to switch to a later Python version, check out [this link](https://docs.unrealengine.com/5.2/en-US/scripting-the-unreal-editor-using-python/)
 
-## .env Variables
+## .env Variables for python
 | Title                   | Value                                                                                           |
 | ----------------------- | ------------------------------------------------------------------------------------------------|
 | MODULES_TO_INSTALL      | ['pandas', 'google-api-python-client', 'google-auth-httplib2', 'google-auth-oauthlib', 'httpx'] |

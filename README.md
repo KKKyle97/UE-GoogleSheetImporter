@@ -14,3 +14,27 @@
 
 
 ## Importing Process
+![Untitled Diagram drawio](https://github.com/KKKyle97/UE-GoogleSheetImporter/assets/68265288/df02be2c-3b84-48f4-bcdb-526d2ff69fd5)
+
+
+## Running Environment
+| Software      | Version |
+| ------------- | ------- |
+| Unreal Engine | 5.2.1   |
+| Python        | 3.9.7   |
+
+## .env Variables
+| Title                   | Value                                                                                           |
+| ----------------------- | ------------------------------------------------------------------------------------------------|
+| MODULES_TO_INSTALL      | ['pandas', 'google-api-python-client', 'google-auth-httplib2', 'google-auth-oauthlib', 'httpx'] |
+| TITLES_FOR_VALUES       | DATATABLE_ROW_TITLE                                                                             |
+| SAMPLE_SPREADSHEET_ID   | YOUR_SPREADSHEET_ID                                                                             |
+| SAMPLE_RANGE_NAME       | SPREADSHEET_TABLE_RANGE                                                                         |
+| PATH_TO_PYTHON          | UNREAL_ENGINE_PATH_TO_PYTHON                                                                    |
+| PATH_TO_CSV_OUTPUT_FILE | CSV_FOLDER_IN_YOUR_PROJECT                                                                      |
+| CREDENTIAL_JSON         | CREDENTIAL_JSON_FILE_NAME                                                                       |
+| TOKEN_JSON              | TOKEN_JSON_FILE_NAME                                                                            |
+
+## Demo
+![Animation](https://github.com/KKKyle97/UE-GoogleSheetImporter/assets/68265288/76c30e75-0c48-491d-b007-3488a5e190f2)
+

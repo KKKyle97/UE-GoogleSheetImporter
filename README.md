@@ -28,6 +28,7 @@
 | ------------- | ------- |
 | Unreal Engine | 5.2.1   |
 | Python        | 3.9.7   |
+> Python default version is based on Unreal Engine Python Plugin. If you were to switch to a later Python version, check out [this link](https://docs.unrealengine.com/5.2/en-US/scripting-the-unreal-editor-using-python/)
 
 ## .env Variables
 | Title                   | Value                                                                                           |
@@ -43,6 +44,11 @@
 
 ## Demo
 ![Animation](https://github.com/KKKyle97/UE-GoogleSheetImporter/assets/68265288/76c30e75-0c48-491d-b007-3488a5e190f2)
+
+## Future Todo
+1. To allow user to import selected datatable ( currently only support 1 datatable to showcase the flow )
+2. To support more unreal datatype E.G. softptr, blueprint class, array etc
+3. To do more validation to make sure data are clean before passing back to unreal engine
 
 ## Credit
 [How To Create Menu Tool in Unreal Engine](https://lxjk.github.io/2019/10/01/How-to-Make-Tools-in-U-E.html)

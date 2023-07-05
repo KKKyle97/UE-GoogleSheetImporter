@@ -11,6 +11,8 @@
     * Does not fully validate all the data from google spreadsheet api
 * it showcase the flow of importing and filling datatable 
 * It can convert whatever type that's supported by unreal "Fill datatable" node (mostly string and numbers)
+* The project linked with google spreadsheet api
+   * You might want to create a google cloud project in order to test this out
 
 
 ## Importing Process
@@ -38,3 +40,6 @@
 ## Demo
 ![Animation](https://github.com/KKKyle97/UE-GoogleSheetImporter/assets/68265288/76c30e75-0c48-491d-b007-3488a5e190f2)
 
+## Credit
+[How To Create Menu Tool in Unreal Engine](https://lxjk.github.io/2019/10/01/How-to-Make-Tools-in-U-E.html)
+[Google Spreadsheet API Overview](https://developers.google.com/sheets/api/guides/concepts)

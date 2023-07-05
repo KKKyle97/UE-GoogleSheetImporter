@@ -17,6 +17,10 @@
 
 ## Importing Process
 ![Untitled Diagram drawio](https://github.com/KKKyle97/UE-GoogleSheetImporter/assets/68265288/df02be2c-3b84-48f4-bcdb-526d2ff69fd5)
+* Developer Select datatable to update
+* The tool will execute python script
+* Python script call api to get the selected spreadsheet data and convert into csv file
+* The tool import converted csv file and fill the datatable
 
 
 ## Running Environment
